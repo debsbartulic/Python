@@ -9,17 +9,18 @@ def obter_mais_longa_substring(s):
 	st = ''
 	maior = ''
 	for i in range(0, len(s)):
-            st = st + s[i]
-            for j in range(i+1, len(s)):
-                if (d[s[j]] >= d[s[j-1]]):
-                    st = st + s[j]
-                else:
-			if (len(st) > 1):
-			    listSaida.append(st)
-			    st = ''
-			    break;
+		st = ''
+		st = st + s[i]
+		for j in range(i+1, len(s)):
+			if (d[s[j]] >= d[s[j-1]]):
+			    st = st + s[j]
+			else:
+				if (len(st) > 1):
+					listSaida.append(st)
+					st = ''
+					break;
+	print(listSaida)
         for item in lista:
 		if (len(item) > len(maior)):
 			maior = item
 	print(maior)
-		
