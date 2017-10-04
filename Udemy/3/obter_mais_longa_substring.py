@@ -13,14 +13,13 @@ def obter_mais_longa_substring(s):
 		st = st + s[i]
 		for j in range(i+1, len(s)):
 			if (d[s[j]] >= d[s[j-1]]):
-			    st = st + s[j]
+				st = st + s[j]
 			else:
 				if (len(st) > 1):
 					listSaida.append(st)
 					st = ''
-					break;
-	print(listSaida)
-        for item in lista:
+				break;
+	for item in listSaida:
 		if (len(item) > len(maior)):
 			maior = item
-	print(maior)
+	return maior
